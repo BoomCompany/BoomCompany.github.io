@@ -6,6 +6,9 @@
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<meta charset="UTF-8">
 	<title>Мастерская Большого Дейва</title>
 </head>
@@ -19,15 +22,19 @@
 	<!-- burger and motorcycle -->
 
 	<!--иконка гамбургера-->
-	<div id="hamburger-open"><span class="spans" id="spanOne"></span><span class="spans" id="spanTwo"></span><span class="spans" id="spanThree"></span></div>
-	<div class="modal-menu">
-	  <a href='index.html' class="menuitem">Главная</a>
-	  <a href='rest.html' class="menuitem">Ресторан</a>
-	  <a href="remont.html" class="menuitem">Мастерская</a>
-	  <a href="help.html" class="menuitem">Помощь</a>
+	<div class="overlay">
+    	<nav class="overlayMenu">  
+        	<ul role="menu">
+	            <li><a href="index.html" role="menuitem">Главная</a></li>
+	            <li><a href="rest.html" role="menuitem">Ресторан</a></li>
+	            <li><a href="remont.html" role="menuitem">Мастерская</a></li>
+	            <li><a href="help.html" role="menuitem">Помощь</a></li>
+        	</ul>
+   	 	</nav>
 	</div>
-  	<script src='https://cdn.jsdelivr.net/mojs/0.265.6/mo.min.js'></script>
-    <script  src="js/index.js"></script>
+	<div class="navBurger" role="navigation" id="navToggle"></div> 
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+   <script  src="js/index.js"></script>
 	<!--иконка гамбургера-->
 	<!--наверх-->
 	<a class="up" href="#">наверх</a>
@@ -41,12 +48,24 @@
 		<p class="header_for_main">Напоминание</p>
 		<p class="text">Как я и говорил, мастерская мотоциклов открылась в <b>1970</b> году. Для мастерской мы обустроили целый гараж! К нам регулярно приезжают сотни байкеров для прокачки или починки своего байка(или просто съесть огромный бургер).</p>
 		<p class="header_for_main">Понятное ценообразование</p>
-		<p class="text">так</p>
+		<p class="text">Мы продаем оригинальные запчасти для мотоциклов по оптимальным ценам. Тем самым, мы приносим выгоду и себе, и вам! Мы сотрудничаем с такими компаниями как:</p>
+		<ul>
+			<li class="text">Kawasaki;</li>
+			<li class="text">Ducati;</li>
+			<li class="text">Yamaha;</li>
+			<li class="text">Awasaki и прочие названия, хорошо известные любителям спорта и скорости;</li>
+		</ul>
+
 		<p class="header_for_main">Комфортная зона ожидания</p>
 		<p class="text">Уютный диванчик, чайник и кофеварка, и несколько мотожурналов скрасят время, проведенное клиентом в ожидании.(можно пообедать вкусного бургера в ресторане рядом) И не забудем про опрятную уборную. Как следствие, посетителям есть чем себя занять, мастера не отвлекаются от работы, посетителю приятно находиться в том месте, где он платит за оказываемые услуги.</p>
 		<img src="img/masterskya3.jpg" width="100%;">
+		<p class="header_for_main">Магазин</p>
+		<p class="text">Также поводом заехать в мастерскую может быть и желание приобрести какой-нибудь полезный аксессуар, сувенир, элемент экипировки. Пока в мотоцикле меняют масло можно заодно успеть обзавестись новым подшлемником, влажными салфетками для визора и запасной лампочкой. Мелочь, а приятно!</p>
 		<p class="header_for_main">Клиентские карты</p>
 		<p class="text">Накопительная система скидок играет большое значение, ведь чем чаще клиент приезжает на обслуживание, тем меньше компания тратит на рекламу и поиск новых заказчиков, а значит может позволить себе предоставлять<b> постоянным клиентам</b> скидки. По карте есть возможность пользоваться спецпредложениями у организаций-партнеров (заказ запчастей, покупка техники и экипировки и т.д.).</p>
+		<img src="img/visit.jpg" width="100%;">
+		<p class="header_for_main">Итог</p>
+		<p class="text">В нашей мастерской вы сможете спокойно усовершенствовать или починить свой байк по низкой цене в спокойной обстановке с чашечкой кофе за прочтением классного журнала!</p>
 		<hr>
 		<p class="text" >Побывав на данном сайте, я надеюсь, что вы для себя подчеркнули две важные детали: </p>
 		<ol>
@@ -62,10 +81,10 @@
 		<a class="footer_header" href="remont.html">Мастерская</a>
 		<a class="footer_header" href="help.html">Помощь</a>
 		<br>
-		<a target="_blank" href="https://vk.com/boom_cha_13"><i style=" margin:25px;  padding: 10px; border-radius: 40px; font-size: 40px; " class="fab fa-vk icon_footer"></i></a>
-		<a target="_blank" href=" https://wa.me/79771257710"><i style="width: 45px; height: 45px; margin:25px; padding: 10px; border-radius: 40px; font-size: 45px;" class="fab fa-whatsapp"></i></a>
-		<a target="_blank" href="https://www.instagram.com/boom_cha_13/"><i style="width: 45px; height: 45px; margin:25px; padding: 10px; border-radius: 40px; font-size: 45px; " class="fab fa-instagram"></i></a>
-		<a target="_blank" href="https://t.me/boom_cha_13"><i style="width: 45px; height: 45px; margin:25px; padding: 10px; border-radius: 40px; font-size: 45px; " class="fab fa-telegram-plane"></i></a>
+		<a target="_blank" href="https://vk.com/boom_cha_13"><i class="fab fa-vk icon_footer"></i></a>
+		<a target="_blank" href=" https://wa.me/79771257710"><i class="fab fa-whatsapp"></i></a>
+		<a target="_blank" href="https://www.instagram.com/boom_cha_13/"><i class="fab fa-instagram"></i></a>
+		<a target="_blank" href="https://t.me/boom_cha_13"><i class="fab fa-telegram-plane"></i></a>
 	</footer>
 </body>
 </html>

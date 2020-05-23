@@ -6,6 +6,9 @@
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<meta charset="UTF-8">
 	<title>Ресторан Большого Дейва</title>
 </head>
@@ -19,15 +22,19 @@
 	<!-- burger and motorcycle -->
 
 	<!--иконка гамбургера-->
-	<div id="hamburger-open"><span class="spans" id="spanOne"></span><span class="spans" id="spanTwo"></span><span class="spans" id="spanThree"></span></div>
-	<div class="modal-menu">
-	  <a href='index.html' class="menuitem">Главная</a>
-	  <a href='rest.html' class="menuitem">Ресторан</a>
-	  <a href="remont.html" class="menuitem">Мастерская</a>
-	  <a href="help.html" class="menuitem">Помощь</a>
+	<div class="overlay">
+    	<nav class="overlayMenu">  
+        	<ul role="menu">
+	            <li><a href="index.html" role="menuitem">Главная</a></li>
+	            <li><a href="rest.html" role="menuitem">Ресторан</a></li>
+	            <li><a href="remont.html" role="menuitem">Мастерская</a></li>
+	            <li><a href="help.html" role="menuitem">Помощь</a></li>
+        	</ul>
+   	 	</nav>
 	</div>
-  	<script src='https://cdn.jsdelivr.net/mojs/0.265.6/mo.min.js'></script>
-    <script  src="js/index.js"></script>
+	<div class="navBurger" role="navigation" id="navToggle"></div> 
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+   <script  src="js/index.js"></script>
 	<!--иконка гамбургера-->
 	<!--наверх-->
 	<a class="up" href="#">наверх</a>
@@ -67,10 +74,10 @@
 		<a class="footer_header" href="remont.html">Мастерская</a>
 		<a class="footer_header" href="help.html">Помощь</a>
 		<br>
-		<a target="_blank" href="https://vk.com/boom_cha_13"><i style=" margin:25px;  padding: 10px; border-radius: 40px; font-size: 40px; " class="fab fa-vk icon_footer"></i></a>
-		<a target="_blank" href=" https://wa.me/79771257710"><i style="width: 45px; height: 45px; margin:25px; padding: 10px; border-radius: 40px; font-size: 45px;" class="fab fa-whatsapp"></i></a>
-		<a target="_blank" href="https://www.instagram.com/boom_cha_13/"><i style="width: 45px; height: 45px; margin:25px; padding: 10px; border-radius: 40px; font-size: 45px; " class="fab fa-instagram"></i></a>
-		<a target="_blank" href="https://t.me/boom_cha_13"><i style="width: 45px; height: 45px; margin:25px; padding: 10px; border-radius: 40px; font-size: 45px; " class="fab fa-telegram-plane"></i></a>
+		<a target="_blank" href="https://vk.com/boom_cha_13"><i class="fab fa-vk icon_footer"></i></a>
+		<a target="_blank" href=" https://wa.me/79771257710"><i class="fab fa-whatsapp"></i></a>
+		<a target="_blank" href="https://www.instagram.com/boom_cha_13/"><i class="fab fa-instagram"></i></a>
+		<a target="_blank" href="https://t.me/boom_cha_13"><i class="fab fa-telegram-plane"></i></a>
 	</footer>
 </body>
 </html>

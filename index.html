@@ -6,6 +6,9 @@
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<meta charset="UTF-8">
 	<title>Бургерное заведение Большого Дейва</title>
 </head>
@@ -19,16 +22,19 @@
 	<!-- burger and motorcycle -->
 
 	<!--иконка гамбургера-->
-	<div id="hamburger-open"><span class="spans" id="spanOne"></span><span class="spans" id="spanTwo"></span><span class="spans" id="spanThree"></span></div>
-	<div class="modal-menu">
-	  <a href='index.html' class="menuitem">Главная</a>
-	  <!--пометь about-->
-	  <a href='rest.html' class="menuitem">Ресторан</a>
-	  <a href="remont.html" class="menuitem">Мастерская</a>
-	  <a href="help.html" class="menuitem">Помощь</a>
+	<div class="overlay">
+    	<nav class="overlayMenu">  
+        	<ul role="menu">
+	            <li><a href="index.html" role="menuitem">Главная</a></li>
+	            <li><a href="rest.html" role="menuitem">Ресторан</a></li>
+	            <li><a href="remont.html" role="menuitem">Мастерская</a></li>
+	            <li><a href="help.html" role="menuitem">Помощь</a></li>
+        	</ul>
+   	 	</nav>
 	</div>
-  	<script src='https://cdn.jsdelivr.net/mojs/0.265.6/mo.min.js'></script>
-    <script  src="js/index.js"></script>
+	<div class="navBurger" role="navigation" id="navToggle"></div> 
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+   <script  src="js/index.js"></script>
 	<!--иконка гамбургера-->
 	<!--наверх-->
 	<a class="up" href="#">наверх</a>
@@ -42,26 +48,26 @@
 		<hr>
 		<p class="header_for_main">Начало положено</p>
 		<p class="text">Наше заведение открылось в <b>1920</b> году. Тогда всем этим управлял мой папа(Большой Джо). В этом году нашему заведению стукнуло <b>100</b> лет!</p>
-		<img src="img/burgernay3.jpg" width="100%" height="550px;">
+		<img  src="img/burgernay3.jpg" width="100%">
 		<p class="header_for_main">О бургерах</p>
 		<p class="text">Мы готовим бургеры, потому что вопреки распространенному мнению на этот счет, <i><b>бургеры – не вредная еда</b></i>, это сложносочиненный бутерброд, которым можно с пользой насытиться, употребив меньшее количество калорий, чем, например, съев комплексный обед.</p>
-		<img src="img/burger.jpg" width="100%;" height="550px;">
+		<img  src="img/burger.jpg" width="100%;">
 		<p class="text">Чтобы узнать больше о <b>ресторане</b> сделайте несколько шагов:</p>
 		<ol>
 			<li class="text">Нажмите на кнопку "наверх";</li>
-			<li class="text">Нажмите на кнопку "меню";</li>
+			<li class="text">Нажмите на кнопку "меню"(правый верхний угол);</li>
 			<li class="text">Перейдите во вкладку "Ресторан";</li>
 			<li class="text">Готово!</li>
 		</ol>
 		<p class="about">О заведении(2)</p>
 		<hr>
 		<p class="header_for_main">Добавление к ресторану</p>
-		<p class="text">Хм... Помните в самом начале, я сказал что наша бургерная непростая? Так и есть! В <b>1970</b> году, мы с папой открыли мастерскую мотоциклов в бургерной! Нет, вы не подумаете, что прямо в бургерной, для этого заведения мы сделали целый гараж!</p>
-		<img src="img/bike2.jpg"width="100%;" height="550px;">
+		<p class="text">Хм... Помните в самом начале, я сказал что наша бургерная непростая? Так и есть! В <b>1970</b> году, мы с папой открыли мастерскую мотоциклов в бургерной! Нет, вы не подумаете, что прямо в бургерной, для этого заведения мы сделали <b>целый гараж</b>!</p>
+		<img src="img/bike2.jpg"width="100%;">
 		<p class="text">Чтобы узнать больше о нашей <b>мастерской мотоциклов</b> сделайте несколько шагов:</p>
 		<ol>
 			<li class="text">Нажмите на кнопку "наверх";</li>
-			<li class="text">Нажмите на кнопку "меню";</li>
+			<li class="text">Нажмите на кнопку "меню"(правый верхний угол);</li>
 			<li class="text">Перейдите во вкладку "Мастерская";</li>
 			<li class="text">Готово!</li>
 		</ol>
@@ -69,15 +75,15 @@
 		<hr>
 		<p class="header_for_main">Помощь</p>
 		<p class="text">В период <b>пандемии</b> во всем мире, "Заведение Большого Дейва" закрыто. Мы очень нуждаемся в вашей <b>материальной поддержке!</b></p>
-		<img src="img/burgernay4.jpg" width="100%;" height="550px;">
+		<img  src="img/burgernay4.jpg" width="100%;" >
 		<p class="text">Если вы хотите узнать больше о <b>помощи</b>, сделайте несколько шагов:</p>
 		<ol>
 			<li class="text">Нажмите на кнопку "наверх";</li>
-			<li class="text">Нажмите на кнопку "меню";</li>
+			<li class="text">Нажмите на кнопку "меню"(правый верхний угол);</li>
 			<li class="text">Перейдите во вкладку "Помощь";</li>
 			<li class="text">Готово!</li>
 		</ol>
-		<p class="text">Также если вы хотите задать нам вопрос, вы можете перейти во вкладку помощь или написать нам в соц. сетях(см. внизу).</p>
+		<p class="text">Также если вы хотите задать нам вопрос, вы можете перейти во вкладку "Помощь" или написать нам в соц. сетях(см. внизу).</p>
 		<hr>
 		<p class="text" >Побывав на данном сайте, я надеюсь, что вы для себя подчеркнули две важные детали: </p>
 		<ol>
@@ -93,10 +99,10 @@
 		<a class="footer_header" href="remont.html">Мастерская</a>
 		<a class="footer_header" href="help.html">Помощь</a>
 		<br>
-		<a target="_blank" href="https://vk.com/boom_cha_13"><i style=" margin:25px;  padding: 10px; border-radius: 40px; font-size: 40px; " class="fab fa-vk icon_footer"></i></a>
-		<a target="_blank" href=" https://wa.me/79771257710"><i style="width: 45px; height: 45px; margin:25px; padding: 10px; border-radius: 40px; font-size: 45px;" class="fab fa-whatsapp"></i></a>
-		<a target="_blank" href="https://www.instagram.com/boom_cha_13/"><i style="width: 45px; height: 45px; margin:25px; padding: 10px; border-radius: 40px; font-size: 45px; " class="fab fa-instagram"></i></a>
-		<a target="_blank" href="https://t.me/boom_cha_13"><i style="width: 45px; height: 45px; margin:25px; padding: 10px; border-radius: 40px; font-size: 45px; " class="fab fa-telegram-plane"></i></a>
+		<a target="_blank" href="https://vk.com/boom_cha_13"><i class="fab fa-vk icon_footer"></i></a>
+		<a target="_blank" href=" https://wa.me/79771257710"><i class="fab fa-whatsapp"></i></a>
+		<a target="_blank" href="https://www.instagram.com/boom_cha_13/"><i class="fab fa-instagram"></i></a>
+		<a target="_blank" href="https://t.me/boom_cha_13"><i class="fab fa-telegram-plane"></i></a>
 	</footer>
 </body>
 </html>
