@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 body, html{
+	transition: 1s;
+	font-size: 0;
 	scroll-behavior: smooth;
 	text-align: center;
 	overflow-x:hidden;  /*для горизонтального*/
@@ -15,7 +17,157 @@ body, html{
 .header_up:hover{
 	text-shadow: 2px 2px 1px black;
 }
+/* theme */
+
+body.light-theme {
+	transition: 1s;
+	color: white;
+	background: black;
+}
+body.light-theme .header_up:hover{
+	text-shadow: 2px 2px 1px white;
+}
+body.light-theme .navBurger:before, .navBurger:after{
+	background-color: white;
+}
+body.light-theme .navBurger:after{
+	background-color: white;
+}
+body.light-theme .burgerwhite_header{
+	z-index: 2;
+	width: 100px;
+	position: absolute;
+	top: 200px;
+	left: 20%;
+}
+body.light-theme .motorcyclewhite_header{
+	z-index: 2;
+	width: 100px;
+	position: absolute;
+	top: 200px;
+	right: : 20%;
+}
+body.light-theme .navBurger{
+	background-color: white;
+}
+body.light-theme .navBurger.active {
+  transition: .1s;
+  background: transparent;
+}
+body.light-theme .up{
+	border: 1px solid black;
+	color: black;
+	background-color: white
+}
+footer.light_footer {
+	transition: 1s;
+	background-color: white;
+}
+footer.light_footer .footer_header{
+	transition: 1s;
+	color: grey;
+}
+footer.light_footer .footer_header:hover{
+	transition: 1s;
+	color: black;
+}
+footer.light_footer .theme_m{
+	transition: 1s;
+	color: black;
+}
+/*icon theme*/
+footer.light_footer .fa-vk{
+	background-color: white;
+}
+footer.light_footer .fa-vk:hover{
+	background-color: #375474;
+	color: white;
+}
+footer.light_footer .fa-whatsapp{
+	background-color: white;
+}
+footer.light_footer .fa-whatsapp:hover{
+	background-color: #43d854;
+	color: white;
+}
+footer.light_footer .fa-instagram{
+	background-color: white;
+}
+footer.light_footer .fa-instagram:hover{
+	background-color: #833AB4;
+	color: white;
+}
+footer.light_footer .fa-telegram-plane{
+	background-color: white;
+}
+footer.light_footer .fa-telegram-plane:hover{
+	background-color: #0088cc;
+	color: white;
+}
+/*icon theme*/
+
+
+.switch-theme {
+  color: grey;
+}
+.theme_m{
+	font-size: 32px;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  
+}
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+          transform: translateX(26px);
+}
+/* theme */
 /* burger and mot. */
+
 .burger_header{
 	position: absolute;
 	width: 100px;
@@ -41,7 +193,8 @@ body, html{
   right: 60px;
   top: 120px;
   cursor: pointer;
-  background: #111;
+  background: black;
+  /*background: #111;*/
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-clip: content-box;
@@ -58,7 +211,7 @@ body, html{
 .navBurger:before, .navBurger:after {
   content: "";
   position: absolute;
-  background: #111;
+  background: black;
   height: 2px;
   width: 100%;
   right: 0;
@@ -83,14 +236,14 @@ body, html{
   -webkit-transform: rotate(135deg);
   transform: rotate(135deg);
   top: 0;
-  background: #eee;
+  background: white;
   width: 110%;
 }
 .navBurger.active:after {
   bottom: 0;
   -webkit-transform: rotate(-135deg);
   transform: rotate(-135deg);
-  background: #eee;
+  background: white;
   width: 110%;
 }
 /**/
@@ -245,6 +398,7 @@ hr{
 /*О Дейве*/
 /*up*/
 .up{
+	font-size: 15px;
 	border: 1px solid white;
 	transition: 1s;
 	box-shadow: 4px 4px 3px grey;
@@ -263,6 +417,7 @@ hr{
 }
 /*up*/
 footer{
+	transition: 1s;
 	padding: 20px;
 	background-color: black;
 }
@@ -330,7 +485,7 @@ footer{
 }
 .fa-instagram:hover{
 	color: white;
-	background-color: #833AB4;
+	background-color: #833AB4;#43d854;#0088cc;
 }
 .fa-telegram-plane{
 	width: 45px; 
@@ -351,6 +506,7 @@ footer{
 /*media*/
 @media (max-width: 500px) and (min-width: 321px) {
 	body, html{
+		scroll-behavior: smooth;
 		overflow-x:hidden;
 	}
 	.navBurger{
@@ -394,6 +550,18 @@ footer{
 		padding: 8px 16px 8px 16px;
 		bottom: 7px;
 
+	}
+	body.light-theme .motorcyclewhite_header{
+		position: absolute;
+		width: 40px;
+		top: 70px;
+		right: 20%;
+	}
+	body.light-theme .burgerwhite_header{
+		position: absolute;
+		width: 40px;
+		top: 70px;
+		left: 20%;
 	}
 	.burger_header{
 	position: absolute;
@@ -441,7 +609,8 @@ footer{
 }
 
 @media (max-width: 320px) and (min-width: 0px) {
-		body, html{
+	body, html{
+		scroll-behavior: smooth;
 		overflow-x:hidden;
 	}
 	.navBurger{
@@ -483,6 +652,18 @@ footer{
 		padding: 6px 12px 6px 12px;
 		bottom: 7px;
 		right: 1%;
+	}
+	body.light-theme .motorcyclewhite_header{
+		position: absolute;
+		width: 30px;
+		top: 65px;
+		right: 20%;
+	}
+	body.light-theme .burgerwhite_header{
+		position: absolute;
+		width: 30px;
+		top: 65px;
+		left: 20%;
 	}
 	.burger_header{
 	position: absolute;
@@ -530,6 +711,7 @@ footer{
 }
 @media (max-width: 700px) and (min-width: 501px) {
 	body, html{
+		scroll-behavior: smooth;
 		overflow-x:hidden;
 	}
 	.navBurger{
@@ -570,6 +752,18 @@ footer{
 		padding: 12px 24px 12px 24px;
 		bottom: 10px;
 
+	}
+	body.light-theme .motorcyclewhite_header{
+		position: absolute;
+		width: 50px;
+		top: 90px;
+		right: 20%;
+	}
+	body.light-theme .burgerwhite_header{
+		position: absolute;
+		width: 50px;
+		top: 90px;
+		left: 20%;
 	}
 	.burger_header{
 	position: absolute;
@@ -619,6 +813,7 @@ footer{
 
 @media (max-width: 900px) and (min-width: 701px) {
 	body, html{
+		scroll-behavior: smooth;
 		overflow-x:hidden;
 	}
 	.navBurger{
@@ -657,6 +852,18 @@ footer{
 		padding: 13px 26px 13px 26px;
 		bottom: 10px;
 
+	}
+	body.light-theme .motorcyclewhite_header{
+		position: absolute;
+		width: 80px;
+		top: 110px;
+		right: 20%;
+	}
+	body.light-theme .burgerwhite_header{
+		position: absolute;
+		width: 80px;
+		top: 110px;
+		left: 20%;
 	}
 	.burger_header{
 	position: absolute;
@@ -704,6 +911,7 @@ footer{
 }
 @media (max-width: 1300px) and (min-width: 901px) {
 	body, html{
+		scroll-behavior: smooth;
 		overflow-x:hidden;
 	}
 	.navBurger{
@@ -743,6 +951,18 @@ footer{
 		padding: 13px 26px 13px 26px;
 		bottom: 10px;
 
+	}
+	body.light-theme .motorcyclewhite_header{
+		position: absolute;
+		width: 100px;
+		top: 130px;
+		right: 20%;
+	}
+	body.light-theme .burgerwhite_header{
+		position: absolute;
+		width: 100px;
+		top: 130px;
+		left: 20%;
 	}
 	.burger_header{
 	position: absolute;
