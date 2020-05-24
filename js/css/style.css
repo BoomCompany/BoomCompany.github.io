@@ -1,0 +1,1004 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+body, html{
+	transition: 1s;
+	font-size: 0;
+	scroll-behavior: smooth;
+	text-align: center;
+	overflow-x:hidden;  /*для горизонтального*/
+	background-color: white;
+	margin: 0;
+}
+.header_up{
+	transition: 0.25s;
+	font-size: 65px;
+	font-family:'Pacifico', cursive;
+	text-align: center;
+}
+.header_up:hover{
+	text-shadow: 2px 2px 1px black;
+}
+/* theme */
+
+body.light-theme {
+	transition: 1s;
+	color: white;
+	background: black;
+}
+body.light-theme .header_up:hover{
+	text-shadow: 2px 2px 1px white;
+}
+body.light-theme .navBurger:before, .navBurger:after{
+	background-color: white;
+}
+body.light-theme .navBurger:after{
+	background-color: white;
+}
+body.light-theme .burgerwhite_header{
+	z-index: 2;
+	width: 100px;
+	position: absolute;
+	top: 200px;
+	left: 20%;
+}
+body.light-theme .motorcyclewhite_header{
+	z-index: 2;
+	width: 100px;
+	position: absolute;
+	top: 200px;
+	right: : 20%;
+}
+body.light-theme .navBurger{
+	background-color: white;
+}
+body.light-theme .navBurger.active {
+  transition: .1s;
+  background: transparent;
+}
+body.light-theme .up{
+	border: 1px solid black;
+	color: black;
+	background-color: white
+}
+footer.light_footer {
+	transition: 1s;
+	background-color: white;
+}
+footer.light_footer .footer_header{
+	transition: 1s;
+	color: grey;
+}
+footer.light_footer .footer_header:hover{
+	transition: 1s;
+	color: black;
+}
+footer.light_footer .theme_m{
+	transition: 1s;
+	color: black;
+}
+/*icon theme*/
+footer.light_footer .fa-vk{
+	background-color: white;
+}
+footer.light_footer .fa-vk:hover{
+	background-color: #375474;
+	color: white;
+}
+footer.light_footer .fa-whatsapp{
+	background-color: white;
+}
+footer.light_footer .fa-whatsapp:hover{
+	background-color: #43d854;
+	color: white;
+}
+footer.light_footer .fa-instagram{
+	background-color: white;
+}
+footer.light_footer .fa-instagram:hover{
+	background-color: #833AB4;
+	color: white;
+}
+footer.light_footer .fa-telegram-plane{
+	background-color: white;
+}
+footer.light_footer .fa-telegram-plane:hover{
+	background-color: #0088cc;
+	color: white;
+}
+.switch-theme {
+	color: grey;
+}
+.theme_m{
+	font-size: 32px;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+  
+}
+.switch input {
+	display: none;
+}
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	border-radius: 34px;
+}
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	border-radius: 50%;
+}
+input:checked + .slider {
+	background-color: #333;
+}
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    transform: translateX(26px);
+}
+/* burger and mot. */
+
+.burger_header{
+	position: absolute;
+	width: 100px;
+	top: 200px;
+	left: 20%;
+	transform: rotate(-45deg);
+}
+.motorcycle_header{
+	position: absolute;
+	width: 100px;
+	top: 200px;
+	right: 20%;
+	transform: rotate(-45deg);
+}
+/* burger and mot. */
+
+/*гамбургер*/
+
+.navBurger {
+  z-index: 3;
+  padding: 2px;
+  position: absolute;
+  right: 60px;
+  top: 120px;
+  cursor: pointer;
+  background: black;
+  /*background: #111;*/
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-clip: content-box;
+  width: 38px;
+  height: 10px;
+  border-radius: 10px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.navBurger:before, .navBurger:after {
+  content: "";
+  position: absolute;
+  background: black;
+  height: 2px;
+  width: 100%;
+  right: 0;
+  will-change: rotate;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.navBurger:before {
+  top: -10px;
+}
+.navBurger:after {
+  bottom: -10px;
+  width: 90%;
+}
+.navBurger.active {
+  background: transparent;
+  background-clip: content-box;
+}
+.navBurger.active:before {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  top: 0;
+  background: white;
+  width: 110%;
+}
+.navBurger.active:after {
+  bottom: 0;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  background: white;
+  width: 110%;
+}
+/**/
+.overlay {
+	z-index: 2;
+  position: fixed;
+  background: #2A3140;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  visibility: hidden;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  overflow: hidden;
+}
+.overlay.open {
+	
+  opacity: .99;
+  visibility: visible;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.overlay.open li {
+  display: block;
+  -webkit-animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+          animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5) forwards;
+  -webkit-animation-delay: .4s;
+          animation-delay: .4s;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+}
+.overlay.open li:nth-of-type(2) {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+.overlay.open li:nth-of-type(3) {
+  -webkit-animation-delay: .6s;
+          animation-delay: .6s;
+}
+.overlay.open li:nth-of-type(4) {
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+}
+.overlay.open li:nth-of-type(5) {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+.overlayMenu {
+  position: absolute;
+  text-align: right;
+  right: 10vw;
+  bottom: 40%;
+}
+.overlayMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  height: 100%;
+}
+.overlayMenu ul li {
+  display: block;
+  position: relative;
+  opacity: 0;
+  width: 100%;
+}
+.overlayMenu ul li a {
+  font-family: "Roboto", sans-serif;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 10px 40px 10px 40px;
+  margin: 5px 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+.overlayMenu ul li a:hover, .overlayMenu ul li a:active, .overlayMenu ul li a:focus {
+  -webkit-transform: translateX(-2px);
+          transform: translateX(-2px);
+  padding-left: 80px;
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.locked {
+  overflow: hidden;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 50px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 50px;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+/*гамбургер*/
+/*О Дейве*/
+.main{
+	margin-top: 50px;
+	display: inline-block;
+	width: 67%;
+}
+.main .text{
+	font-size: 28px;
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+}
+.about{
+	font-size: 60px;
+	text-align: left;
+	font-family: 'Lobster', cursive;
+	font-weight: bold;
+}
+hr{
+	border-width: 2px;
+}
+.header_for_main{
+	font-weight: bold;
+	font-size: 38px;
+	font-family: 'Roboto', sans-serif;
+	text-align: left; 
+}
+/*О Дейве*/
+/*up*/
+.up{
+	font-size: 15px;
+	border: 1px solid white;
+	transition: 1s;
+	box-shadow: 4px 4px 3px grey;
+	text-decoration: none;
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	padding: 10px 20px 10px 20px;
+	background-color: black;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	border-radius: 40px;
+}
+.up:hover{
+	box-shadow: none;
+}
+/*up*/
+footer{
+	transition: 1s;
+	padding: 20px;
+	background-color: black;
+}
+.footer_header{
+	font-weight: normal;
+	transition: 0.5s;
+	/*background-color:blue;*/
+	padding: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 35px;
+	text-decoration: none;
+	color: #C0C0C0;
+	margin-top: 50px;
+}
+.footer_header:hover{
+	color: white;
+}
+.money{
+	transition: 1s;
+	text-decoration: none;
+	color: blue;
+}
+.money:hover{
+	color: magenta;
+}
+/*icon*/
+.fa-vk{
+	margin:25px; 
+	padding: 10px; 
+	border-radius: 40px; 
+	font-size: 40px;
+	color: grey;
+	transition: 1s;
+	background-color: black;
+}
+.fa-vk:hover{
+	color: white;
+	background-color: #375474;
+}
+.fa-whatsapp{
+	width: 45px; 
+	height: 45px; 
+	margin:25px; 
+	padding: 10px; 
+	border-radius: 40px; 
+	font-size: 45px;
+	color: grey;
+	transition: 1s;
+	background-color: black;
+}
+.fa-whatsapp:hover{
+	color: white;
+	background-color:#43d854;
+}
+.fa-instagram{
+	width: 45px; 
+	height: 45px; 
+	margin:25px; 
+	padding: 10px; 
+	border-radius: 40px; 
+	font-size: 45px;
+	color: grey;
+	transition: 1s;
+	background-color: black;
+}
+.fa-instagram:hover{
+	color: white;
+	background-color: #833AB4;#43d854;#0088cc;
+}
+.fa-telegram-plane{
+	width: 45px; 
+	height: 45px; 
+	margin:25px; 
+	padding: 10px; 
+	border-radius: 40px; 
+	font-size: 45px;
+	color: grey;
+	transition: 1s;
+	background-color: black;
+}
+.fa-telegram-plane:hover{
+	color: white;
+	background-color: #0088cc;
+}
+/*icon*/
+/*media*/
+@media (max-width: 500px) and (min-width: 321px) {
+	body, html{
+		scroll-behavior: smooth;
+		overflow-x:hidden;
+	}
+	.navBurger{
+		width: 33px;
+		position: absolute;
+		right: 5px;
+		top: 30px;
+	}
+	.carta{
+		height: 520px;
+	}
+	.main{
+		margin-top: 10px;
+		width: 92%;
+	}
+	.header_for_main{
+		font-size: 21px;
+	}
+	.footer_header{
+		font-size: 23px;
+		padding: 10px;
+	}
+	.about{
+		font-size: 32px;
+	}
+	.main .text{
+		font-size: 18px;
+	}
+	#up{
+		font-size: 26px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	#up:hover{
+		text-shadow: 1px 1px 1px black;
+	} 
+	.up{
+		position: fixed;
+		right: 5px;
+
+		padding: 8px 16px 8px 16px;
+		bottom: 7px;
+
+	}
+	body.light-theme .motorcyclewhite_header{
+		position: absolute;
+		width: 40px;
+		top: 70px;
+		right: 20%;
+	}
+	body.light-theme .burgerwhite_header{
+		position: absolute;
+		width: 40px;
+		top: 70px;
+		left: 20%;
+	}
+	.burger_header{
+	position: absolute;
+	width: 40px;
+	top: 70px;
+	left: 20%;
+	}
+	.motorcycle_header{
+	position: absolute;
+	width: 40px;
+	top: 70px;
+	right: 20%;
+	}
+	footer{
+		padding: 10px 10px 25px 10px;
+	}
+	.fa-vk{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+	.fa-whatsapp{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+	.fa-instagram{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+	.fa-telegram-plane{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+}
+
+@media (max-width: 320px) and (min-width: 0px) {
+	body, html{
+		scroll-behavior: smooth;
+		overflow-x:hidden;
+	}
+	.navBurger{
+		width: 29px;
+		position: absolute;
+		right: 5px;
+		top: 30px;
+	}
+	.carta{
+		height: 500px;
+	}
+	.main{
+		margin-top: 10px;
+		width: 95%;
+	}
+	.header_for_main{
+		font-size: 21px;
+	}
+	.footer_header{
+		font-size: 23px;
+		padding: 10px;
+	}
+	.about{
+		font-size: 32px;
+	}
+	.main .text{
+		font-size: 19px;
+	}
+	#up{
+		font-size: 23px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	#up:hover{
+		text-shadow: 1px 1px 1px black;
+	}
+	.up{
+		position: fixed;
+		padding: 6px 12px 6px 12px;
+		bottom: 7px;
+		right: 1%;
+	}
+	body.light-theme .motorcyclewhite_header{
+		position: absolute;
+		width: 30px;
+		top: 65px;
+		right: 20%;
+	}
+	body.light-theme .burgerwhite_header{
+		position: absolute;
+		width: 30px;
+		top: 65px;
+		left: 20%;
+	}
+	.burger_header{
+	position: absolute;
+	width: 30px;
+	top: 65px;
+	left: 20%;
+	}
+	.motorcycle_header{
+	position: absolute;
+	width: 30px;
+	top: 65px;
+	right: 20%;
+	}
+	footer{
+		padding: 10px 10px 25px 10px;
+	}
+	.fa-vk{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+	.fa-whatsapp{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+	.fa-instagram{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+	.fa-telegram-plane{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+}
+@media (max-width: 700px) and (min-width: 501px) {
+	body, html{
+		scroll-behavior: smooth;
+		overflow-x:hidden;
+	}
+	.navBurger{
+		position: absolute;
+		right: 10px;
+		top: 45px;
+	}
+	.carta{
+		height: 520px;
+	}
+	.main{
+		margin-top: 10px;
+		width: 85%;
+	}
+	.header_for_main{
+		font-size: 27px;
+
+	}
+	.footer_header{
+		font-size: 23px;
+		padding: 10px;
+	}
+	.about{
+		font-size: 36px;
+	}
+	.main .text{
+		font-size: 28px;
+	}
+	#up{
+		font-size: 42px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.up{
+		position: fixed;
+		right: 7px;
+
+		padding: 12px 24px 12px 24px;
+		bottom: 10px;
+
+	}
+	body.light-theme .motorcyclewhite_header{
+		position: absolute;
+		width: 50px;
+		top: 90px;
+		right: 20%;
+	}
+	body.light-theme .burgerwhite_header{
+		position: absolute;
+		width: 50px;
+		top: 90px;
+		left: 20%;
+	}
+	.burger_header{
+	position: absolute;
+	width: 50px;
+	top: 90px;
+	left: 20%;
+	}
+	.motorcycle_header{
+	position: absolute;
+	width: 50px;
+	top: 90px;
+	right: 20%;
+	}
+	footer{
+		padding: 10px 10px 25px 10px;
+	}
+	.fa-vk{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+	.fa-whatsapp{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+	.fa-instagram{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+	.fa-telegram-plane{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+}
+
+
+@media (max-width: 900px) and (min-width: 701px) {
+	body, html{
+		scroll-behavior: smooth;
+		overflow-x:hidden;
+	}
+	.navBurger{
+		width: 38px;
+		position: absolute;
+		right: 12px;
+		top: 60px;
+	}
+	
+	.main{
+		margin-top: 10px;
+		width: 90%;
+	}
+	.header_for_main{
+		font-size: 36px;
+
+	}
+	.footer_header{
+		font-size: 27px;
+		padding: 10px;
+	}
+	.about{
+		font-size: 50px;
+	}
+	.main .text{
+		font-size: 32px;
+	}
+	#up{
+		font-size: 55px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.up{
+		position: fixed;
+		right: 7px;
+		padding: 13px 26px 13px 26px;
+		bottom: 10px;
+
+	}
+	body.light-theme .motorcyclewhite_header{
+		position: absolute;
+		width: 80px;
+		top: 110px;
+		right: 20%;
+	}
+	body.light-theme .burgerwhite_header{
+		position: absolute;
+		width: 80px;
+		top: 110px;
+		left: 20%;
+	}
+	.burger_header{
+	position: absolute;
+	width: 80px;
+	top: 110px;
+	left: 20%;
+	}
+	.motorcycle_header{
+	position: absolute;
+	width: 80px;
+	top: 110px;
+	right: 20%;
+	}
+	footer{
+		padding: 10px 10px 25px 10px;
+	}
+	.fa-vk{
+		padding: 8px;
+		margin: 8px;
+		width: 50px;
+		height: 50px;
+		font-size: 50px;
+	}
+	.fa-whatsapp{
+		padding: 8px;
+		margin: 8px;
+		width: 50px;
+		height: 50px;
+		font-size: 50px;
+	}
+	.fa-instagram{
+		padding: 8px;
+		margin: 8px;
+		width: 50px;
+		height: 50px;
+		font-size: 50px;
+	}
+	.fa-telegram-plane{
+		padding: 8px;
+		margin: 8px;
+		width: 50px;
+		height: 50px;
+		font-size: 50px;
+	}
+}
+@media (max-width: 1300px) and (min-width: 901px) {
+	body, html{
+		scroll-behavior: smooth;
+		overflow-x:hidden;
+	}
+	.navBurger{
+		width: 46px;
+		position: absolute;
+		right: 20px;
+		top: 77px;
+	}
+	
+	.main{
+		margin-top: 10px;
+		width: 85%;
+	}
+	.header_for_main{
+		font-size: 46px;
+
+	}
+	.footer_header{
+		font-size: 23px;
+		padding: 10px;
+	}
+	.about{
+		font-size: 55px;
+	}
+	.main .text{
+		font-size: 35px;
+	}
+	#up{
+		font-size: 64px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.up{
+
+		position: fixed;
+		right: 7px;
+		padding: 13px 26px 13px 26px;
+		bottom: 10px;
+
+	}
+	body.light-theme .motorcyclewhite_header{
+		position: absolute;
+		width: 100px;
+		top: 130px;
+		right: 20%;
+	}
+	body.light-theme .burgerwhite_header{
+		position: absolute;
+		width: 100px;
+		top: 130px;
+		left: 20%;
+	}
+	.burger_header{
+	position: absolute;
+	width: 100px;
+	top: 130px;
+	left: 20%;
+	}
+	.motorcycle_header{
+	position: absolute;
+	width: 100px;
+	top: 130px;
+	right: 20%;
+	}
+	footer{
+		padding: 10px 10px 25px 10px;
+	}
+	.fa-vk{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+	.fa-whatsapp{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+	.fa-instagram{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+	.fa-telegram-plane{
+		padding: 7px;
+		margin: 7px;
+		width: 40px;
+		height: 40px;
+		font-size: 40px;
+	}
+}
+/*media*/
