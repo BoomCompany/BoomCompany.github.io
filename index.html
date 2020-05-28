@@ -13,6 +13,11 @@
 	<title>Заведение Большого Дейва</title>
 </head>
 <body>
+	<!--preolader-->
+	<div id="preloader">
+      <div id="loader"></div>
+    </div>
+	<!--preolader-->
 	<header class="header_up">
 		<p id="up">Заведение Большого<br>Дейва</p>
 	</header>
@@ -115,6 +120,15 @@
 		</div>
 		<script  src="js/theme.js"></script>
 		<!--theme-->
+		<script>
+    	jQuery(document).ready(function($) { 
+          $(window).on("load",function (){
+
+            $("#preloader").fadeOut(1000);
+
+          });
+        });
+    	</script>
 	</footer>
 </body>
 </html>
